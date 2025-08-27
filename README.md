@@ -1,61 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Teste Digital One
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Informações para o processo seletivo de desenvolvedor
 
-## About Laravel
+## Funcionalidades
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A aplicação permite que o usuário execute as seguintes operações:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. **Registro e Login**
+   - **Cadastro**: O usuário pode se registrar no sistema informando seu e-mail e senha.
+   - **Login**: O usuário pode realizar login com seu e-mail e senha previamente cadastrados.
+   - **Recuperação de senha**: Caso o usuário esqueça a senha, ele pode recuperá-la. O sistema verifica se o e-mail fornecido existe na base de dados e permite ao usuário alterar sua senha.
+### 2. **Perfil de Usuário**
+   - O usuário pode acessar o seu próprio perfil onde poderá:
+     - **Alterar o nome**: O nome exibido no perfil pode ser atualizado.
+     - **Alterar o e-mail**: O e-mail exibido no perfil pode ser atualizado.
+     - **Alterar a senha**: O usuário pode modificar sua senha.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 3. **Página "Feed"**
+   - O usuário logado pode acessar uma página de **Feed**, onde será possível:
+     - **Publicar**: Criar novas publicações. Cada publicação deve ter uma descrição.
+     - **Visualizar**: Visualizar as publicações de outros usuários no feed.
 
-## Learning Laravel
+### 4. **Edição e Exclusão de Publicações**
+   - Se o usuário logado for o **autor** de uma publicação:
+     - Ele poderá **editar** a publicação.
+     - Ele poderá **excluir** a publicação.
+   
+   Caso o usuário não seja o autor da publicação, ele não terá a opção de editar ou excluir.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Estrutura do Projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### Backend
+   - **Tecnologia**: Laravel.
+   - **Banco de Dados**: MySQL/phpMyAdmin.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Frontend
+   - **Tecnologia**: Blade (ferramenta Laravel).
+   - **Componentes principais**:
+     - **Login**: Formulário de login.
+     - **Registro**: Formulário de registro.
+     - **Perfil**: Página do perfil com a funcionalidade de alteração de nome, e-mail e senha.
+     - **Feed**: Página principal onde as publicações podem ser visualizadas e criadas.
+     - **Post**: Componente de publicação individual com opções de edição e exclusão.
